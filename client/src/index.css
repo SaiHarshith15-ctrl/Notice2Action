@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-body dark:bg-[#14132B] dark:text-[#E3E2F5];
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Smooth checkbox "tick" animation */
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0.4; }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.tick-pop {
+  animation: pop 0.25s ease-out;
+}
+
+.progress-bar-fill {
+  transition: width 0.4s ease;
+}
